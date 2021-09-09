@@ -1,0 +1,115 @@
+<resources>
+    // language string
+    <string name="app_name" translatable="false">Cadavi Music Player</string>
+    <string name="artist">Artist</string>
+    <string name="playlist">Playlist</string>
+    <string name="album">Album</string>
+    <string name="all_song">All songs</string>
+    <string name="favorite">Favorite</string>
+    <string name="genres">Genre</string>
+    <string name="feedback">Feedback</string>
+    <string name="policy">Privacy policy</string>
+    <string name="now_is_playing">Now is playing</string>
+    <string name="now_is_pausing">Now is pausing</string>
+    <string name="update_app">New update available</string>
+    <string name="dialog_update_available_message">It seems that you have an older version of the app.\nPlease update to get latest features and best experience.</string>
+    <string name="update_now">Go to Google Play</string>
+    <string name="title_ask_permisstion">Allow access to music library</string>
+    <string name="message_permisstion">Please allow the app to access your music library so that the app can play it.</string>
+    <string name="searching">Searching</string>
+    <string name="try_again">Please try again!</string>
+    <string name="tell_impro">Tell us what need to improve?</string>
+    <string name="give_feedback">Give us your feedback and suggestion</string>
+    <string name="loading_song">Loading Songs</string>
+    <string name="thanks">Thank you!</string>
+    <string name="privacy_policy">Privacy policy</string>
+    <string name="song">song</string>
+    <string name="songs">songs</string>
+    <string name="artists">artists</string>
+    <string name="artist_count">artist</string>
+    <string name="album_count">album</string>
+    <string name="albums">albums</string>
+    <string name="empty_song_sub">Please add songs to this device \nto enjoy the music</string>
+    <string name="title_dialog_permistion">Allow access to music library</string>
+    <string name="sub_title_dialog_permistion">Please allow the app to access your music library so that the app can play it.</string>
+    <string name="no_song">No songs</string>
+    <string name="songs_session">Songs</string>
+    <string name="empty_playlist_title">Create playlist</string>
+    <string name="empty_playlist_sub">Please create your own playlists</string>
+    <string name="create_new_playlist">Create new playlist</string>
+    <string name="name_your_playlist">Name your playlist</string>
+    <string name="create">Create</string>
+    <string name="delete">Delete</string>
+    <string name="you_can_not_action">You can not undo this action</string>
+    <string name="delete_success">Deleted successfully</string>
+
+    <string name="empty__song_playlist_sub">Please add songs to this playlist \nto enjoy the music</string>
+    <string name="update">Update</string>
+    //accessibility
+    <string name="play_button">Play</string>
+    <string name="pause_button">Pause</string>
+    <string name="next_button">Next</string>
+    <string name="previous_button">Previous</string>
+    <string name="search_button">Search</string>
+    <string name="back_button">Back</string>
+    <string name="shuffle_button">Shuffle</string>
+    <string name="shuffle_on_button">Shuffle turn on</string>
+    <string name="shuffle_off_button">Shuffle turn off</string>
+    <string name="repeat_button">Repeat the playlist</string>
+    <string name="repeat_one_button">Repeat one song</string>
+    <string name="repeat_off_button">Repeat off</string>
+    <string name="favorite_button">Favorite</string>
+    <string name="unfavorite_button">Unfavorite</string>
+    <string name="menu_button">Menu</string>
+    <string name="hint_text_search">Search</string>
+    <string name="search_button_menu">Search button</string>
+    <string name="shuffle_all_button">Shuffle all</string>
+    <string name="hint_text_feedback">Enter your feedback</string>
+    <string name="mini_player">Mini player</string>
+    <string name="thumbnail_song">Song thumbnail</string>
+    <string name="thumbnail_artist">Artist thumbnail</string>
+    <string name="thumbnail_album">Album thumbnail</string>
+    <string name="thumbnail_genre">Genre thumbnail</string>
+    <string name="thumbnail_playlist">Playlist Thumbnail</string>
+    <string name="create_playlist_button">Create playlist</string>
+    <string name="close_button">Close</string>
+    <string name="hint_text_create_playlist">Enter the name</string>
+    <string name="hint_text_rename_playlist">Edit the name</string>
+    <string name="more_button">More</string>
+    <string name="add_song_to_playlist">Add song</string>
+    <string name="select_song">Selected </string>
+    <string name="save_button">Save button</string>
+    <string name="clear_all">Clear all</string>
+    <string name="clear_search">Deleted search</string>
+
+    // accessibility + language string
+    <string name="cancel">Cancel</string>
+    <string name="send">Send</string>
+    <string name="setting_button_dialog">Setting</string>
+    <string name="ok_dialog">OK</string>
+    <string name="save_btn">Save</string>
+    <string name="rename_playlist">Rename playlist</string>
+    <string name="delete_playlits">Delete playlist</string>
+    <string name="new_feature">New feature </string>
+
+    // Add a song to a custom playlist from player screen
+    <string name="added_to">Added to</string>
+    <string name="song_was_added">This song was added to playlist</string>
+    <string name="navigation_drawer_close">menu</string>
+    <string name="navigation_drawer_open">Menu</string>
+    <string name="add_to_playlist">Add to playlist</string>
+    <string name="add_my_playlist">Add to my playlist</string>
+    <string name="made_by_with">Made by Caoboy95</string>
+    <string name="with">with</string>
+    // Sleep timer
+    <string name="sleep_timer">Sleep timer</string>
+    <string name="set">Set</string>
+    <string name="your_sleep_timer_is_set">Your sleep timer is set</string>
+    <string name="hour">Hour</string>
+    <string name="min">Min</string>
+    <string name="time_left">%1$s%2$s left</string>
+    <string name="news">new</string>
+    <string name="artist_name">Artist Name</string>
+    <string name="count_songs">Count Songs</string>
+    <string name="network_connection">Please check your connection!</string>
+</resources>

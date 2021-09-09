@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/colorPrimary"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/playlistitemadd_holder"
+    android:fitsSystemWindows="true">
+
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/playlistitemadd_actionbar"
+            android:layout_width="match_parent"
+            android:layout_height="56dp">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:fontFamily="sans-serif"
+                    android:textSize="16sp"
+                    android:text="title"
+                    android:gravity="left|center"
+                    android:id="@+id/title"
+                    android:layout_alignParentLeft="true"
+                    android:textColor="@color/color_white"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginRight="70dp"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:singleLine="true"
+                    android:layout_gravity="start" />
+
+                <TextView
+                    android:fontFamily="sans-serif"
+                    android:layout_alignParentRight="true"
+                    android:textSize="16sp"
+                    android:textColor="@color/tab_color"
+                    android:id="@+id/save_btn"
+                    android:gravity="center"
+                    android:contentDescription="@string/save_button"
+                    android:layout_width="60dp"
+                    android:layout_height="40dp"
+                    android:layout_marginRight="15dp"
+                    android:text="@string/save_btn"/>
+            </RelativeLayout>
+
+
+        </androidx.appcompat.widget.Toolbar>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <FrameLayout
+        android:paddingLeft="-10dp"
+        android:id="@+id/frame"
+        android:layout_below="@+id/appbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.SearchView
+            android:id="@+id/search_view"
+            android:layout_marginStart="12dp"
+            android:layout_marginEnd="12dp"
+            app:queryHint="@string/hint_text_search"
+            app:iconifiedByDefault="false"
+            app:searchIcon="@drawable/ic_search_view"
+            app:closeIcon="@null"
+            android:paddingRight="@dimen/_8sdp"
+            android:paddingEnd="@dimen/_8sdp"
+            android:background="@drawable/shape_bg_search"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <ImageButton
+            android:background="?selectableItemBackgroundBorderless"
+            android:id="@+id/clear_text"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:visibility="gone"
+            android:contentDescription="@string/clear_all"
+            android:layout_gravity="right|center_vertical"
+            android:src="@drawable/ic_close_text" />
+
+    </FrameLayout>
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/playlistitemadd_list"
+        android:scrollbars="vertical"
+        android:scrollbarThumbVertical="@drawable/style_scrollbar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="5dp"
+        android:layout_below="@+id/frame"
+        />
+
+</RelativeLayout>

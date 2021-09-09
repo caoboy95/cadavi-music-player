@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:background="@color/colorPrimary"
+    android:layout_height="match_parent">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="20dp"
+        android:id="@+id/HHHHHHH"
+        android:focusable="false"
+        >
+        <LinearLayout
+            android:id="@+id/linear"
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <ImageButton
+                    android:layout_alignParentLeft="true"
+                    android:background="?selectableItemBackgroundBorderless"
+                    android:layout_width="50dp"
+                    android:contentDescription=" "
+                    android:layout_height="50dp"
+                    android:src="@drawable/ic_close_dialog_playlist"/>
+                <ImageButton
+                    android:id="@+id/close_button"
+                    android:layout_alignParentLeft="true"
+                    android:background="?selectableItemBackgroundBorderless"
+                    android:layout_width="50dp"
+                    android:contentDescription="@string/close_button"
+                    android:layout_height="50dp"
+                    android:src="@drawable/ic_close_dialog_playlist"/>
+            </RelativeLayout>
+
+            <TextView
+                android:layout_toRightOf="@id/close_button"
+                android:layout_centerHorizontal="true"
+                android:id="@+id/intro"
+                android:layout_marginRight="50dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:textSize="16sp"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:fontFamily="sans-serif-medium"
+                android:text="@string/create_new_playlist"
+                android:textColor="@color/color_white" />
+        </LinearLayout>
+
+
+        <TextView
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/linear"
+            android:id="@+id/suggestion"
+            android:textSize="14sp"
+            android:gravity="center"
+            android:layout_marginTop="50dp"
+            android:fontFamily="sans-serif"
+            android:ellipsize="end"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/name_your_playlist"
+            android:textColor="@color/color_white" />
+        <FrameLayout
+            android:id="@+id/frame"
+            android:layout_marginTop="50dp"
+            android:layout_below="@id/suggestion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:contentDescription="@string/hint_text_create_playlist"
+                android:inputType="textCapSentences"
+                android:id="@+id/edt_pl"
+                android:cursorVisible="true"
+                android:gravity="top"
+                android:maxLines="1"
+                android:lines="1"
+                android:singleLine="true"
+                android:maxLength="50"
+                android:paddingRight="@dimen/_32sdp"
+                android:paddingEnd="@dimen/_32sdp"
+                android:imeOptions="actionDone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/color_place_holder"
+                android:fontFamily="sans-serif"
+                android:textColor="@color/color_white"
+                />
+
+            <ImageButton
+                android:background="?selectableItemBackgroundBorderless"
+                android:id="@+id/clear_text"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:visibility="gone"
+                android:contentDescription="@string/clear_all"
+                android:layout_gravity="right|center_vertical"
+                android:src="@drawable/ic_close_text" />
+
+        </FrameLayout>
+
+        <LinearLayout
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/frame"
+            android:gravity="center"
+            android:layout_marginTop="50dp"
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:textAllCaps="false"
+                android:background="?selectableItemBackgroundBorderless"
+                android:layout_marginRight="50dp"
+                android:id="@+id/tv_cancel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="@string/cancel"
+                android:textSize="16sp"
+                android:fontFamily="sans-serif-medium"
+                android:textColor="@color/color_white" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:textSize="16sp"
+                android:fontFamily="sans-serif-medium"
+                android:textAllCaps="false"
+                android:background="?selectableItemBackgroundBorderless"
+                android:id="@+id/tv_create"
+                android:enabled="false"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="@string/create"
+                android:textColor="@color/color_white" />
+        </LinearLayout>
+    </RelativeLayout>
+
+</ScrollView>

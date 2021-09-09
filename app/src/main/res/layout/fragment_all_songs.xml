@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/img_success"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_centerInParent="true"
+            android:visibility="invisible"
+            app:lottie_autoPlay="true"
+            app:lottie_rawRes="@raw/success" />
+
+        <com.caocao.cadavimusicplayer.util.EmptyRecyclerView
+            android:scrollbars="vertical"
+            android:scrollbarThumbVertical="@drawable/style_scrollbar"
+            android:id="@+id/recycle_list_song"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="5dp"
+            android:visibility="invisible"
+            />
+
+        <ImageView
+            android:id="@+id/shuffle_all"
+            android:layout_width="@dimen/_55sdp"
+            android:layout_height="@dimen/_55sdp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_margin="23dp"
+            android:contentDescription="@string/shuffle_all_button"
+            android:src="@drawable/shuffle_add_button"
+            app:backgroundTint="@android:color/transparent"
+            android:visibility="visible"
+            />
+
+        <include
+            android:id="@+id/empty_songs"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="invisible"
+            layout="@layout/empty_all_song" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/waiting_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorPrimaryDark"
+        android:visibility="visible"
+        />
+
+    <com.facebook.shimmer.ShimmerFrameLayout
+        android:id="@+id/shimmer_view_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <include layout="@layout/song_place_holder" />
+
+            <include layout="@layout/song_place_holder" />
+
+            <include layout="@layout/song_place_holder" />
+
+            <include layout="@layout/song_place_holder" />
+
+            <include layout="@layout/song_place_holder" />
+
+            <include layout="@layout/song_place_holder" />
+
+            <include layout="@layout/song_place_holder" />
+
+            <include layout="@layout/song_place_holder" />
+
+            <include layout="@layout/song_place_holder" />
+
+        </LinearLayout>
+
+    </com.facebook.shimmer.ShimmerFrameLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

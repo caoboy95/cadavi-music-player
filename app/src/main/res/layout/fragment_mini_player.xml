@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mini_player_layout"
+    android:layout_width="match_parent"
+    android:contentDescription="@string/mini_player"
+    android:layout_height="70dp"
+    android:background="@color/color_mini_player"
+    app:backgroundType="solid">
+    <RelativeLayout
+        android:id="@+id/sssss"
+        android:paddingLeft="-15dp"
+        android:paddingRight="-15dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <ProgressBar
+            android:id="@+id/mini_player_progress"
+            style="@style/MySeekBar"
+            android:layout_width="match_parent"
+            android:layout_height="5dp"
+            android:max="100"
+            android:minWidth="100dp"
+            android:maxWidth="2000dp"
+            android:progress="100"
+            />
+    </RelativeLayout>
+
+    <ImageView
+        android:layout_below="@id/sssss"
+        android:id="@+id/mini_player_art"
+        android:layout_width="63dp"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/ic_default_not_radius" />
+
+    <TextView
+        android:id="@+id/mini_player_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="5dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_toStartOf="@+id/linearButton"
+        android:layout_toLeftOf="@+id/linearButton"
+        android:layout_toEndOf="@+id/mini_player_art"
+        android:layout_toRightOf="@+id/mini_player_art"
+        android:ellipsize="marquee"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:freezesText="true"
+        android:marqueeRepeatLimit="marquee_forever"
+        android:scrollHorizontally="true"
+        android:singleLine="true"
+        android:textColor="@color/color_white"
+        android:textSize="14sp"
+        android:fontFamily="sans-serif-medium"
+        tools:text="Title" />
+
+    <LinearLayout
+        android:id="@+id/linearButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerInParent="true"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:id="@+id/mini_player_playpause"
+            android:layout_width="35dp"
+            android:layout_height="50dp"
+            android:background="@null"
+            android:src="@drawable/ic_play_artist" />
+
+        <ImageButton
+            android:contentDescription="@string/next_button"
+            android:id="@+id/mini_player_next"
+            style="@style/Widget.AppCompat.ImageButton"
+            android:layout_width="35dp"
+            android:layout_height="50dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerInParent="true"
+            android:background="@null"
+            android:src="@drawable/ic_icon_next" />
+    </LinearLayout>
+
+
+</RelativeLayout>

@@ -1,0 +1,114 @@
+<resources>
+    // language string
+    <string name="app_name">CoCo Music Player</string>
+    <string name="artist">Nghệ sĩ</string>
+    <string name="playlist">Danh sách nhạc</string>
+    <string name="album">Album</string>
+    <string name="all_song">Tất cả</string>
+    <string name="favorite">Yêu thích</string>
+    <string name="genres">Thể loại</string>
+    <string name="feedback">Phản hồi</string>
+    <string name="policy">Chính sách bảo mật</string>
+    <string name="now_is_playing">Đang phát</string>
+    <string name="update_app">Bản cập nhật mới</string>
+    <string name="dialog_update_available_message">Bạn đang dùng phiên bản cũ của ứng dụng. Bạn vui lòng cập nhật phiên bản mới để trải nghiệm tốt hơn cùng những tính năng mới nhất.</string>
+    <string name="update_now">Đến Google Play</string>
+    <string name="title_ask_permisstion">Cho phép truy cập thư viện bài hát</string>
+    <string name="message_permisstion">Bạn vui lòng cho phép truy cập thư viện bài hát để ứng dụng có thể phát các bài hát của bạn.</string>
+    <string name="searching">Tìm kiếm</string>
+    <string name="try_again">Vui lòng thử lại!</string>
+    <string name="tell_impro">Chúng tôi có thể giúp gì cho bạn?</string>
+    <string name="give_feedback">Vui lòng cho chúng tôi biết vấn đề hoặc đề xuất của bạn</string>
+    <string name="loading_song">Đang tải bài hát</string>
+    <string name="thanks">Cảm ơn bạn!</string>
+    <string name="privacy_policy">Chính sách bảo mật</string>
+    <string name="song">bài hát</string>
+    <string name="songs">bài hát</string>
+    <string name="artists">nghệ sĩ</string>
+    <string name="artist_count">nghệ sĩ</string>
+    <string name="album_count">album</string>
+    <string name="albums">album</string>
+    <string name="empty_song_sub">Bạn vui lòng thêm nhạc vào thiết bị để nghe các bài hát</string>
+    <string name="title_dialog_permistion">Cho phép truy cập thư viện bài hát</string>
+    <string name="sub_title_dialog_permistion">Bạn vui lòng cho phép truy cập thư viện bài hát để ứng dụng có thể phát các bài hát của bạn.</string>
+    <string name="no_song">Không có bài hát nào</string>
+    <string name="songs_session">Bài hát</string>
+    <string name="empty_playlist_title">Không có danh sách nhạc nào</string>
+    <string name="empty_playlist_sub">Bạn vui lòng tạo danh sách nhạc của riêng bạn</string>
+    <string name="create_new_playlist">Tạo danh sách nhạc mới</string>
+    <string name="name_your_playlist">Tên danh sách nhạc</string>
+    <string name="create">Tạo</string>
+    <string name="delete">Xóa</string>
+    <string name="you_can_not_action">Bạn không thể hoàn lại hành động này</string>
+    <string name="delete_success">Đã xóa</string>
+    <string name="empty__song_playlist_sub">Bạn vui lòng thêm nhạc vào danh sách này để phát các bài hát</string>
+    <string name="update">Cập nhật</string>
+    //accessibility
+    <string name="play_button">Phát bài hát</string>
+    <string name="pause_button">Dừng bài hát</string>
+    <string name="next_button">Bài tiếp</string>
+    <string name="previous_button">Bài trước</string>
+    <string name="search_button">Tìm kiếm</string>
+    <string name="back_button">Quay lại</string>
+    <string name="shuffle_button">Phát ngẫu nhiên</string>
+    <string name="shuffle_on_button">Chế độ phát ngẫu nhiên</string>
+    <string name="shuffle_off_button">Chế độ phát theo thứ tự</string>
+    <string name="repeat_button">Lặp lại danh sách nhạc</string>
+    <string name="repeat_one_button">Lặp lại một bài hát</string>
+    <string name="repeat_off_button">Không lặp lại</string>
+    <string name="favorite_button">Yêu thích</string>
+    <string name="unfavorite_button">Bỏ yêu thích</string>
+    <string name="menu_button">Các mục khác</string>
+    <string name="hint_text_search">Tìm kiếm</string>
+    <string name="search_button_menu">Nút tìm kiếm</string>
+    <string name="shuffle_all_button">Phát ngẫu nhiên</string>
+    <string name="hint_text_feedback">Nhập phản hồi của bạn</string>
+    <string name="mini_player">Trình phát nhạc thu nhỏ</string>
+    <string name="thumbnail_song">Ảnh bài hát</string>
+    <string name="thumbnail_artist">Ảnh nghệ sĩ</string>
+    <string name="thumbnail_album">Ảnh album</string>
+    <string name="thumbnail_genre">Ảnh thể loại</string>
+    <string name="thumbnail_playlist">Ảnh danh sách nhạc</string>
+    <string name="create_playlist_button">Tạo danh sách nhạc</string>
+    <string name="close_button">Đóng</string>
+    <string name="hint_text_create_playlist">Nhập tên danh sách nhạc</string>
+    <string name="hint_text_rename_playlist">Sửa tên danh sách nhạc</string>
+    <string name="more_button">Mục khác</string>
+    <string name="add_song_to_playlist">Thêm bài hát vào danh sách nhạc</string>
+    <string name="select_song">Đã chọn </string>
+    <string name="save_button">Lưu</string>
+    <string name="clear_search">Đã xóa tìm kiếm</string>
+
+    // accessibility + language string
+    <string name="cancel">Hủy</string>
+    <string name="send">Gởi</string>
+    <string name="setting_button_dialog">Đi đến Cài đặt</string>
+    <string name="ok_dialog">OK</string>
+    <string name="save_btn">Lưu</string>
+    <string name="rename_playlist">Sửa tên danh sách nhạc</string>
+    <string name="delete_playlits">Xóa danh sách nhạc</string>
+    <string name="new_feature">Tính năng mới</string>
+    <string name="clear_all">Xóa tất cả</string>
+    // Add a song to a custom playlist from player screen
+    <string name="added_to">Bài hát này đã được thêm vào danh sách </string>
+    <string name="song_was_added">Bài hát này đã được thêm trước đó vào danh sách </string>
+    <string name="navigation_drawer_close">Các mục khác</string>
+    <string name="navigation_drawer_open">Các mục khác</string>
+    <string name="add_to_playlist">Thêm vào danh sách nhạc</string>
+    <string name="add_my_playlist">Thêm vào danh sách nhạc</string>
+    <string name="made_by_with">Phát triển bởi Caoboy95</string>
+    <string name="with">với</string>
+
+    // Sleep timer
+    <string name="sleep_timer">Hẹn giờ</string>
+    <string name="set">Thiết lập</string>
+    <string name="your_sleep_timer_is_set">Bộ hẹn giờ đã được thiết lập</string>
+    <string name="hour">Giờ</string>
+    <string name="min">Phút</string>
+    <string name="time_left">Còn lại %1$s%2$s</string>
+    <string name="news">mới</string>
+    <string name="artist_name">Artist Name</string>
+    <string name="count_songs">Count Songs</string>
+    <string name="network_connection">Vui lòng kiểm tra lại đường truyền mạng!</string>
+
+</resources>

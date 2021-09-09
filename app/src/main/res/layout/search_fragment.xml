@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    android:clickable="true"
+    android:focusable="true">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize">
+
+        <TextView
+            android:id="@+id/title_view"
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp"
+            android:fontFamily="sans-serif-medium"
+            android:text="@string/searching"
+            android:textColor="@color/color_white"
+            android:textSize="20sp" />
+
+    </androidx.appcompat.widget.Toolbar>
+    <FrameLayout
+        android:paddingLeft="-10dp"
+        android:id="@+id/frame"
+        android:layout_below="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.SearchView
+            android:id="@+id/search_view"
+            android:layout_marginStart="12dp"
+            android:layout_marginEnd="12dp"
+            app:queryHint="@string/hint_text_search"
+            app:iconifiedByDefault="false"
+            android:paddingRight="@dimen/_8sdp"
+            android:paddingEnd="@dimen/_8sdp"
+            app:searchIcon="@drawable/ic_search_view"
+            app:closeIcon="@null"
+            android:background="@drawable/shape_bg_search"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <ImageButton
+            android:background="?selectableItemBackgroundBorderless"
+            android:id="@+id/clear_text"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:visibility="gone"
+            android:contentDescription="@string/clear_all"
+            android:layout_gravity="right|center_vertical"
+            android:src="@drawable/ic_close_text" />
+
+    </FrameLayout>
+
+
+    <ImageView
+        android:visibility="visible"
+        android:id="@+id/empty"
+        android:layout_gravity="center"
+        android:src="@drawable/list_empty"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"/>
+
+    <!-- Specific -->
+    <LinearLayout
+        android:visibility="gone"
+        android:id="@+id/scroll_view"
+        android:orientation="vertical"
+        android:weightSum="3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/song_recy"
+            android:scrollbars="vertical"
+            android:scrollbarThumbVertical="@drawable/style_scrollbar"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="5dp"
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+    </LinearLayout>
+</LinearLayout>

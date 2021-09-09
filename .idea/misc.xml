@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/cao/laptrinh/androidd/Cadavi Music Player/app/src/main/res/drawable-v24/ic_icon_foreground.xml" value="0.2833333333333333" />
+        <entry key="..\:/cao/laptrinh/androidd/Cadavi Music Player/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.3828125" />
+        <entry key="..\:/cao/laptrinh/androidd/Cadavi Music Player/app/src/main/res/drawable/color_primary_gradient.xml" value="0.3828125" />
+        <entry key="..\:/cao/laptrinh/androidd/Cadavi Music Player/app/src/main/res/drawable/gradient_button.xml" value="0.3828125" />
+        <entry key="..\:/cao/laptrinh/androidd/Cadavi Music Player/app/src/main/res/drawable/gradient_color.xml" value="0.3828125" />
+        <entry key="..\:/cao/laptrinh/androidd/Cadavi Music Player/app/src/main/res/drawable/ic_add.xml" value="0.3828125" />
+        <entry key="..\:/cao/laptrinh/androidd/Cadavi Music Player/app/src/main/res/drawable/ic_audio_genre.xml" value="0.2833333333333333" />
+        <entry key="..\:/cao/laptrinh/androidd/Cadavi Music Player/app/src/main/res/drawable/ic_back.xml" value="0.2833333333333333" />
+        <entry key="..\:/cao/laptrinh/androidd/Cadavi Music Player/app/src/main/res/drawable/ic_back_not_background.xml" value="0.3828125" />
+        <entry key="..\:/cao/laptrinh/androidd/Cadavi Music Player/app/src/main/res/drawable/ic_close.xml" value="0.3828125" />
+        <entry key="..\:/cao/laptrinh/androidd/Cadavi Music Player/app/src/main/res/drawable/ic_close_dialog_playlist.xml" value="0.3828125" />
+        <entry key="..\:/cao/laptrinh/androidd/Cadavi Music Player/app/src/main/res/drawable/ic_close_text.xml" value="0.3828125" />
+        <entry key="..\:/cao/laptrinh/androidd/Cadavi Music Player/app/src/main/res/drawable/ic_code_play_music_player.xml" value="0.3828125" />
+        <entry key="..\:/cao/laptrinh/androidd/Cadavi Music Player/app/src/main/res/drawable/ic_country_genre.xml" value="0.3828125" />
+        <entry key="..\:/cao/laptrinh/androidd/Cadavi Music Player/app/src/main/res/drawable/ic_dance_genre.xml" value="0.3828125" />
+        <entry key="..\:/cao/laptrinh/androidd/Cadavi Music Player/app/src/main/res/drawable/ic_default_not_radius.xml" value="0.2833333333333333" />
+        <entry key="..\:/cao/laptrinh/androidd/Cadavi Music Player/app/src/main/res/drawable/ic_delete.xml" value="0.3828125" />
+        <entry key="..\:/cao/laptrinh/androidd/Cadavi Music Player/app/src/main/res/drawable/ic_dot_albums.xml" value="0.3828125" />
+        <entry key="..\:/cao/laptrinh/androidd/Cadavi Music Player/app/src/main/res/drawable/ic_dot_new_func.xml" value="0.3828125" />
+        <entry key="..\:/cao/laptrinh/androidd/Cadavi Music Player/app/src/main/res/drawable/ic_dot_seek_bar.xml" value="0.3828125" />
+        <entry key="..\:/cao/laptrinh/androidd/Cadavi Music Player/app/src/main/res/drawable/ic_edit.xml" value="0.3828125" />
+        <entry key="..\:/cao/laptrinh/androidd/Cadavi Music Player/app/src/main/res/drawable/ic_edit_playlist.xml" value="0.3828125" />
+        <entry key="..\:/cao/laptrinh/androidd/Cadavi Music Player/app/src/main/res/drawable/ic_edm_genre.xml" value="0.3828125" />
+        <entry key="..\:/cao/laptrinh/androidd/Cadavi Music Player/app/src/main/res/drawable/ic_failed.xml" value="0.3828125" />
+        <entry key="..\:/cao/laptrinh/androidd/Cadavi Music Player/app/src/main/res/drawable/ic_feedback.xml" value="0.3828125" />
+        <entry key="..\:/cao/laptrinh/androidd/Cadavi Music Player/app/src/main/res/drawable/ic_float_butotn.xml" value="0.3828125" />
+        <entry key="..\:/cao/laptrinh/androidd/Cadavi Music Player/app/src/main/res/drawable/ic_genre_other.xml" value="0.3828125" />
+        <entry key="..\:/cao/laptrinh/androidd/Cadavi Music Player/app/src/main/res/drawable/ic_group_194.xml" value="0.3828125" />
+        <entry key="..\:/cao/laptrinh/androidd/Cadavi Music Player/app/src/main/res/drawable/ic_heart.xml" value="0.3828125" />
+        <entry key="..\:/cao/laptrinh/androidd/Cadavi Music Player/app/src/main/res/drawable/ic_icon_expand.xml" value="0.2833333333333333" />
+        <entry key="..\:/cao/laptrinh/androidd/Cadavi Music Player/app/src/main/res/drawable/ic_icon_menu_app.xml" value="0.3828125" />
+        <entry key="..\:/cao/laptrinh/androidd/Cadavi Music Player/app/src/main/res/drawable/ic_icon_pre_white.xml" value="0.3828125" />
+        <entry key="..\:/cao/laptrinh/androidd/Cadavi Music Player/app/src/main/res/drawable/ic_instrument.xml" value="0.3828125" />
+        <entry key="..\:/cao/laptrinh/androidd/Cadavi Music Player/app/src/main/res/drawable/ic_launcher_background.xml" value="0.3828125" />
+        <entry key="..\:/cao/laptrinh/androidd/Cadavi Music Player/app/src/main/res/drawable/ic_love_genre.xml" value="0.3828125" />
+        <entry key="..\:/cao/laptrinh/androidd/Cadavi Music Player/app/src/main/res/drawable/ic_more.xml" value="0.3828125" />
+        <entry key="..\:/cao/laptrinh/androidd/Cadavi Music Player/app/src/main/res/drawable/ic_music_.xml" value="0.2833333333333333" />
+        <entry key="..\:/cao/laptrinh/androidd/Cadavi Music Player/app/src/main/res/drawable/ic_pause_notifi.xml" value="0.3828125" />
+        <entry key="..\:/cao/laptrinh/androidd/Cadavi Music Player/app/src/main/res/drawable/ic_repeat.xml" value="0.2833333333333333" />
+        <entry key="..\:/cao/laptrinh/androidd/Cadavi Music Player/app/src/main/res/drawable/ic_repeat_all.xml" value="0.3296875" />
+        <entry key="..\:/cao/laptrinh/androidd/Cadavi Music Player/app/src/main/res/drawable/ic_repeat_off.xml" value="0.3296875" />
+        <entry key="..\:/cao/laptrinh/androidd/Cadavi Music Player/app/src/main/res/drawable/ic_second_dot.xml" value="0.2833333333333333" />
+        <entry key="..\:/cao/laptrinh/androidd/Cadavi Music Player/app/src/main/res/drawable/ic_shuff_artist.xml" value="0.2833333333333333" />
+        <entry key="..\:/cao/laptrinh/androidd/Cadavi Music Player/app/src/main/res/drawable/ic_shuff_white.xml" value="0.2833333333333333" />
+        <entry key="..\:/cao/laptrinh/androidd/Cadavi Music Player/app/src/main/res/drawable/ic_shuffle_all.xml" value="0.2833333333333333" />
+        <entry key="..\:/cao/laptrinh/androidd/Cadavi Music Player/app/src/main/res/drawable/ic_shuffle_player.xml" value="0.2833333333333333" />
+        <entry key="..\:/cao/laptrinh/androidd/Cadavi Music Player/app/src/main/res/drawable/ic_success.xml" value="0.2833333333333333" />
+        <entry key="..\:/cao/laptrinh/androidd/Cadavi Music Player/app/src/main/res/drawable/ic_un_shuffle.xml" value="0.2833333333333333" />
+        <entry key="..\:/cao/laptrinh/androidd/Cadavi Music Player/app/src/main/res/drawable/list_empty.xml" value="0.2833333333333333" />
+        <entry key="..\:/cao/laptrinh/androidd/Cadavi Music Player/app/src/main/res/drawable/seekbar_custom.xml" value="0.2833333333333333" />
+        <entry key="..\:/cao/laptrinh/androidd/Cadavi Music Player/app/src/main/res/drawable/shape_bg_search.xml" value="0.2833333333333333" />
+        <entry key="..\:/cao/laptrinh/androidd/Cadavi Music Player/app/src/main/res/drawable/shuffle_add_button.xml" value="0.2833333333333333" />
+        <entry key="..\:/cao/laptrinh/androidd/Cadavi Music Player/app/src/main/res/drawable/splash_icon.xml" value="0.2833333333333333" />
+        <entry key="..\:/cao/laptrinh/androidd/Cadavi Music Player/app/src/main/res/drawable/style_scrollbar.xml" value="0.2833333333333333" />
+        <entry key="..\:/cao/laptrinh/androidd/Cadavi Music Player/app/src/main/res/layout/activity_home.xml" value="0.33" />
+        <entry key="..\:/cao/laptrinh/androidd/Cadavi Music Player/app/src/main/res/layout/album_item.xml" value="0.21422101449275363" />
+        <entry key="..\:/cao/laptrinh/androidd/Cadavi Music Player/app/src/main/res/layout/artist_fragment.xml" value="0.1707193515704154" />
+        <entry key="..\:/cao/laptrinh/androidd/Cadavi Music Player/app/src/main/res/layout/dialog_add_to_my_playlist.xml" value="0.35104166666666664" />
+        <entry key="..\:/cao/laptrinh/androidd/Cadavi Music Player/app/src/main/res/layout/empty_all_song.xml" value="0.1707193515704154" />
+        <entry key="..\:/cao/laptrinh/androidd/Cadavi Music Player/app/src/main/res/layout/fragment_album.xml" value="0.35104166666666664" />
+        <entry key="..\:/cao/laptrinh/androidd/Cadavi Music Player/app/src/main/res/layout/fragment_album_detail.xml" value="0.35104166666666664" />
+        <entry key="..\:/cao/laptrinh/androidd/Cadavi Music Player/app/src/main/res/layout/fragment_all_songs.xml" value="0.1838768115942029" />
+        <entry key="..\:/cao/laptrinh/androidd/Cadavi Music Player/app/src/main/res/layout/fragment_artist.xml" value="0.35104166666666664" />
+        <entry key="..\:/cao/laptrinh/androidd/Cadavi Music Player/app/src/main/res/layout/fragment_mini_player.xml" value="0.36666666666666664" />
+        <entry key="..\:/cao/laptrinh/androidd/Cadavi Music Player/app/src/main/res/layout/fragment_music_player.xml" value="0.1947463768115942" />
+        <entry key="..\:/cao/laptrinh/androidd/Cadavi Music Player/app/src/main/res/layout/item_song.xml" value="0.75" />
+        <entry key="..\:/cao/laptrinh/androidd/Cadavi Music Player/app/src/main/res/layout/mini_player_fragment.xml" value="0.19746376811594202" />
+        <entry key="..\:/cao/laptrinh/androidd/Cadavi Music Player/app/src/main/res/layout/nav_item.xml" value="0.35104166666666664" />
+        <entry key="..\:/cao/laptrinh/androidd/Cadavi Music Player/app/src/main/res/layout/navigation_head.xml" value="0.75" />
+        <entry key="..\:/cao/laptrinh/androidd/Cadavi Music Player/app/src/main/res/layout/panel_content.xml" value="0.1707193515704154" />
+        <entry key="..\:/cao/laptrinh/androidd/Cadavi Music Player/app/src/main/res/layout/search_fragment.xml" value="0.36666666666666664" />
+        <entry key="..\:/cao/laptrinh/androidd/Cadavi Music Player/app/src/main/res/layout/song_place_holder.xml" value="0.36666666666666664" />
+        <entry key="..\:/cao/laptrinh/androidd/Cadavi Music Player/app/src/main/res/layout/splash_screen.xml" value="0.36666666666666664" />
+        <entry key="..\:/cao/laptrinh/androidd/Cadavi Music Player/app/src/main/res/layout/widget_big.xml" value="0.35104166666666664" />
+        <entry key="..\:/cao/laptrinh/androidd/Cadavi Music Player/app/src/main/res/layout/widget_medium.xml" value="0.35104166666666664" />
+        <entry key="..\:/cao/laptrinh/androidd/Cadavi Music Player/app/src/main/res/mipmap-anydpi-v26/ic_icon.xml" value="0.3828125" />
+        <entry key="..\:/cao/laptrinh/androidd/Cadavi Music Player/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.3828125" />
+        <entry key="..\:/cao/laptrinh/androidd/Cadavi Music Player/app/src/main/res/mipmap-anydpi-v26/ic_logo.xml" value="0.3828125" />
+        <entry key="..\:/cao/laptrinh/androidd/Cadavi Music Player/app/src/main/res/mipmap-anydpi-v26/ic_logo_round.xml" value="0.3828125" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>

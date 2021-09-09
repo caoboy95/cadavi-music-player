@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#0a253e</color>
+    <color name="colorPrimaryDark">#0a253e</color>
+    <color name="colorLogo">#f0ac20</color>
+    <color name="colorAccent">#EEB238</color>
+    <color name="tab_color">#EEB238</color>
+    <color name="tab_text">#FFFFFF</color>
+    <color name="color_white">#FFFFFF</color>
+    <color name="color_trans">#000000</color>
+    <color name="color_place_holder">#C4C4C4</color>
+    <color name="colorButton">#03DAC5</color>
+    <color name="color_mini_player">#061727</color>
+    <color name="color_dark">#061727</color>
+    <color name="colorBlack">#000000</color>
+    <color name="color_gray">#80FFFFFF</color>
+    <color name="color_background_shuffle">#FE9E0A</color>
+    <color name="color_transparent">#00ffffff</color>
+    <color name="color_highlight">#EEB238</color>
+
+    <color name="tran_recycle">#CC1C223D</color>
+
+</resources>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="15sp">
+
+    <TextView
+        android:id="@+id/title_header"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-medium"
+        android:text="@string/artist"
+        android:paddingLeft="15sp"
+        android:textColor="@color/color_white"
+        android:textSize="20sp" />
+
+    <TextView
+        android:layout_alignParentRight="true"
+        android:id="@+id/count_header"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="5dp"
+        android:layout_weight="1"
+        android:layout_centerVertical="true"
+        android:fontFamily="sans-serif"
+        android:text="total artist"
+        android:textColor="@color/color_place_holder"
+        android:textSize="12sp" />
+</RelativeLayout>

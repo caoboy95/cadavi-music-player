@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    android:padding="8dp">
+
+    <ImageButton
+        android:id="@+id/close_button"
+        android:layout_width="@dimen/_50sdp"
+        android:layout_height="@dimen/_50sdp"
+        android:layout_alignParentLeft="true"
+        android:layout_marginTop="10dp"
+        android:background="?selectableItemBackgroundBorderless"
+        android:contentDescription="@string/close_button"
+        android:src="@drawable/ic_close_dialog_playlist" />
+
+    <TextView
+        android:id="@+id/intro"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:layout_marginRight="@dimen/_50sdp"
+        android:layout_toRightOf="@id/close_button"
+        android:ellipsize="end"
+        android:fontFamily="sans-serif-medium"
+        android:gravity="center"
+        android:text="@string/add_my_playlist"
+        android:textColor="@color/color_white"
+        android:textSize="16sp" />
+
+    <ImageButton
+        android:layout_width="@dimen/_50sdp"
+        android:layout_height="@dimen/_50sdp"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="10dp"
+        android:background="?selectableItemBackgroundBorderless"
+        android:contentDescription="@string/close_button"
+        android:importantForAccessibility="no"
+        android:src="@drawable/ic_close_dialog_playlist"
+        android:visibility="invisible" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_create_playlist"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/intro"
+        android:layout_centerHorizontal="true"
+        android:paddingRight="@dimen/_40sdp"
+        android:layout_marginTop="@dimen/_30sdp"
+        android:background="@null"
+        android:drawableLeft="@drawable/ic_add"
+        android:gravity="center|left"
+        android:maxLines="2"
+        android:text="@string/create_new_playlist"
+        android:textAllCaps="false"
+        android:textColor="@color/color_white"
+        android:textSize="16sp" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:scrollbars="vertical"
+        android:scrollbarThumbVertical="@drawable/style_scrollbar"
+        android:id="@+id/playlist_recycler_view"
+        android:layout_width="match_parent"
+        android:importantForAccessibility="no"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btn_create_playlist"
+        android:layout_marginTop="@dimen/_20sdp" />
+</RelativeLayout>

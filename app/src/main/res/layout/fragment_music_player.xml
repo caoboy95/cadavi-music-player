@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/setting_content"
+    android:layout_marginBottom="20dp"
+    android:layout_width="match_parent"
+    android:importantForAccessibility="no"
+    android:layout_height="wrap_content"
+    android:background="@color/colorPrimary"
+    android:fitsSystemWindows="true">
+    <ImageButton
+        android:layout_width="50dp"
+        android:layout_height="60dp"
+        android:background="@null"
+        android:contentDescription="@string/back_button"
+        android:id="@+id/explain"
+        android:src="@drawable/ic_icon_expand"/>
+    <LinearLayout
+        android:id="@+id/linear"
+        android:layout_marginRight="50dp"
+        android:layout_marginLeft="50dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/playing_state"
+            android:importantForAccessibility="no"
+            android:fontFamily="sans-serif"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:ellipsize="marquee"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:freezesText="true"
+            android:gravity="center"
+            android:scrollHorizontally="true"
+            android:text="@string/now_is_playing"
+            android:textColor="@color/color_gray"
+            android:textSize="12sp" />
+
+        <TextView
+            android:importantForAccessibility="no"
+            android:fontFamily="sans-serif-medium"
+            android:id="@+id/title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:focusable="true"
+            android:ellipsize="end"
+            android:focusableInTouchMode="true"
+            android:gravity="center"
+            android:maxLines="2"
+            android:textColor="@color/color_white"
+            android:textSize="18sp" />
+    </LinearLayout>
+    <ImageButton
+        android:layout_alignParentRight="true"
+        android:layout_width="50dp"
+        android:layout_height="60dp"
+        android:background="@null"
+        android:contentDescription="@string/more_button"
+        android:id="@+id/more_btn"
+        android:src="@drawable/ic_more"
+        android:layout_alignParentEnd="true" />
+    <ImageButton
+        android:layout_below="@id/linear"
+        android:id="@+id/favorite"
+        android:layout_width="50dp"
+        android:background="?selectableItemBackgroundBorderless"
+        android:layout_height="50dp"
+        android:contentDescription="@string/unfavorite_button"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="7dp"
+        android:src="@drawable/ic_unfavorite"/>
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:layout_below="@id/linear"
+        android:id="@+id/animationfavorite"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_centerHorizontal="true"
+        android:visibility="gone"
+        android:contentDescription="@string/favorite_button"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        app:lottie_loop="true"
+        app:lottie_rawRes="@raw/favorite" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView"
+        android:layout_width="@dimen/_250sdp"
+        android:layout_height="@dimen/_250sdp"
+        android:contentDescription="@string/thumbnail_song"
+        android:layout_marginLeft="15dp"
+        android:layout_below="@id/favorite"
+        android:layout_centerInParent="true"
+        android:layout_marginRight="15dp"
+        app:cardCornerRadius="6dp">
+
+        <ImageView
+            android:importantForAccessibility="no"
+            android:id="@+id/player_art"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/favorite"
+            android:background="@drawable/ic_default_not_radius"
+            android:scaleType="centerCrop" />
+    </androidx.cardview.widget.CardView>
+
+
+    <RelativeLayout
+        android:layout_alignParentBottom="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <androidx.appcompat.widget.AppCompatSeekBar
+            android:id="@+id/progress"
+            style="@style/MySeekBar"
+            android:contentDescription=""
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginEnd="5dp"
+            android:layout_marginRight="5dp" />
+        <!--        android:progressDrawable="@drawable/seekbar_custom"-->
+        <TextView
+            android:id="@+id/current"
+            android:fontFamily="sans-serif"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/progress"
+            android:layout_marginStart="20dp"
+            android:layout_marginLeft="20dp"
+            android:textColor="@color/color_white"
+            android:textSize="12sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/progress"
+            tools:text="2:58" />
+
+        <TextView
+            android:id="@+id/duration"
+            android:fontFamily="sans-serif"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/progress"
+            android:layout_alignParentRight="true"
+            android:layout_marginEnd="20dp"
+            android:layout_marginRight="20dp"
+            android:textColor="@color/color_white"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/progress"
+            tools:text="3:00" />
+
+        <ImageButton
+            android:id="@+id/repeat"
+            style="@style/Widget.AppCompat.ImageButton"
+            android:layout_width="65dp"
+            android:layout_height="70dp"
+            android:layout_below="@id/current"
+            android:background="?selectableItemBackgroundBorderless"
+            android:src="@drawable/ic_repeat_all" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/current"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+
+            <ImageButton
+                android:id="@+id/gotoBack"
+                style="@style/Widget.AppCompat.ImageButton"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:background="?selectableItemBackgroundBorderless"
+                android:contentDescription="@string/previous_button"
+                android:src="@drawable/ic_icon_pre_white" />
+
+            <ImageButton
+                android:id="@+id/play"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_marginStart="25dp"
+                android:layout_marginEnd="25dp"
+                android:background="@null"
+                android:src="@drawable/ic_play" />
+
+            <ImageButton
+                android:id="@+id/gotoNext"
+                style="@style/Widget.AppCompat.ImageButton"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:contentDescription="@string/next_button"
+                android:src="@drawable/ic_icon_next_white" />
+        </LinearLayout>
+
+        <ImageButton
+            android:id="@+id/shuffle"
+            style="@style/Widget.AppCompat.ImageButton"
+            android:layout_width="65dp"
+            android:layout_height="70dp"
+            android:layout_below="@id/current"
+            android:layout_alignParentRight="true"
+            android:background="?selectableItemBackgroundBorderless"
+            android:src="@drawable/ic_shuffle_player" />
+    </RelativeLayout>
+
+</RelativeLayout>
