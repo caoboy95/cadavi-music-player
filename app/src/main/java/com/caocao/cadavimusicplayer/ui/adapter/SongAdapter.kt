@@ -40,7 +40,7 @@ class SongAdapter : RecyclerView.Adapter<SongAdapter.SongHolder>(), Consumer<Lis
             binding.rootListItem.setOnClickListener {
                 listener.onClickSong(position)
             }
-            binding.imageViewSong.loadArtSong(song)
+            binding.imageViewSong.loadArtSong(song.albumId)
         }
 
         private fun setImagePlayPause(song: Song) {

@@ -1,6 +1,5 @@
 package com.caocao.cadavimusicplayer.ui.view
 
-import android.content.SharedPreferences
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -9,7 +8,6 @@ import android.widget.SeekBar
 import com.caocao.cadavimusicplayer.R
 import com.caocao.cadavimusicplayer.base.BasePlayerFragment
 import com.caocao.cadavimusicplayer.data.model.Song
-import com.caocao.cadavimusicplayer.data.repository.PreferenceRepository
 import com.caocao.cadavimusicplayer.databinding.FragmentMusicPlayerBinding
 import com.caocao.cadavimusicplayer.service.MusicPlayer
 import com.caocao.cadavimusicplayer.ui.HomeActivity
@@ -124,7 +122,7 @@ class MusicPlayerFragment : BasePlayerFragment<MusicPlayerViewModel, FragmentMus
         binding.progress.max = song.duration.toInt()
         binding.duration.text = exchangeDurationToText(song.duration.toInt())
         getService()?.run {
-            binding.playerArt.loadArtSong(getCurrentSongOrNull())
+            binding.playerArt.loadArtSong(getCurrentSongOrNull()?.albumId)
         }
     }
 

@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:layout_margin="3dp"
-    >
+    android:layout_margin="3dp">
 
     <RelativeLayout
         android:layout_width="wrap_content"
@@ -32,7 +30,7 @@
             android:paddingBottom="10dp">
 
             <TextView
-                android:id="@+id/grid_title"
+                android:id="@+id/album_title"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="8dp"
@@ -42,7 +40,7 @@
                 android:textSize="16sp"
                 android:fontFamily="sans-serif-medium"
                 android:textColor="@color/color_white"
-                tools:text="Artist" />
+                tools:text="Album" />
 
             <TextView
                 android:maxLines="1"
@@ -50,13 +48,13 @@
                 android:fontFamily="sans-serif"
                 android:textSize="12sp"
                 android:textColor="@color/color_gray"
-                android:id="@+id/grid_subtitle"
+                android:id="@+id/artist_title"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/grid_title"
+                android:layout_below="@+id/album_title"
                 android:layout_marginLeft="8dp"
                 android:layout_marginRight="8dp"
-                tools:text="1 Song" />
+                tools:text="No name" />
         </RelativeLayout>
     </RelativeLayout>
 </RelativeLayout>

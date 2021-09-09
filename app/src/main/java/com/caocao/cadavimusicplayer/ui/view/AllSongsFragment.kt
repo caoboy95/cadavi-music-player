@@ -20,7 +20,7 @@ import com.caocao.cadavimusicplayer.util.isPermissionGranted
 import org.koin.android.ext.android.inject
 
 
-class AllSongsFragment : BaseFragment<AllSongViewModel, FragmentAllSongsBinding>() {
+class AllSongsFragment: BaseFragment<AllSongViewModel, FragmentAllSongsBinding>() {
     override val viewModel: AllSongViewModel by inject()
     private lateinit var songAdapter : SongAdapter
 
@@ -72,6 +72,7 @@ class AllSongsFragment : BaseFragment<AllSongViewModel, FragmentAllSongsBinding>
         stopShimmerView()
         binding.recycleListSong.visibility = View.GONE
         binding.emptySongs.emptyViewAll.visibility = View.GONE
+        binding.shuffleAll.visibility = View.GONE
     }
 
     private fun updateWithPermissionAllow(songs : List<Song>) {
@@ -93,7 +94,6 @@ class AllSongsFragment : BaseFragment<AllSongViewModel, FragmentAllSongsBinding>
     private fun setRecycleView() {
         songAdapter = SongAdapter().apply {
             setOnClickSongListener(object : SongAdapter.OnClickSongListener {
-                @SuppressLint("NotifyDataSetChanged")
                 override fun onClickSong(position: Int) {
                     viewModel.songItemClicked(position)
                     (activity as? HomeActivity)?.openPlayer()

@@ -3,8 +3,10 @@ package com.caocao.cadavimusicplayer.data.repository
 import android.content.Context
 import android.net.Uri
 import android.provider.MediaStore
+import com.caocao.cadavimusicplayer.data.model.Album
 import com.caocao.cadavimusicplayer.data.model.Song
 import com.caocao.cadavimusicplayer.util.Query
+import com.caocao.cadavimusicplayer.util.songsToAlbums
 import com.caocao.cadavimusicplayer.util.toBrite
 import com.example.testapp.data.db.AppDatabase
 import io.reactivex.Observable
@@ -61,5 +63,11 @@ class MediaRepository constructor(
         return briteContentResolver.createQuery(songQuery.uri, songQuery.projection, songQuery.selection,
             songQuery.args, songQuery.sort, false)
             .mapToList { Song(it) }
+    }
+
+    fun getAlbums(): Observable<List<Album>> = getSongs().flatMap { Observable.just(songsToAlbums(it)) }
+
+    fun getAlbumSongs(albumId: Long): Observable<List<Song>> {
+        return getSongs().map { songs -> songs.filter { it.albumId == albumId } }
     }
 }

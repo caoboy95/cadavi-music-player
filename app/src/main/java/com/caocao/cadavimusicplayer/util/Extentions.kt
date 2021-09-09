@@ -11,18 +11,20 @@ import android.graphics.Color
 import android.os.Build
 import android.transition.Fade
 import android.util.Log
+import android.util.LongSparseArray
 import android.widget.ImageView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
+import androidx.core.util.forEach
 import androidx.fragment.app.Fragment
 import com.caocao.cadavimusicplayer.R
+import com.caocao.cadavimusicplayer.data.model.Album
 import com.caocao.cadavimusicplayer.data.model.Song
 import com.squareup.picasso.Picasso
 import com.squareup.sqlbrite2.BriteContentResolver
 import com.squareup.sqlbrite2.SqlBrite
 import io.reactivex.disposables.Disposable
 import io.reactivex.schedulers.Schedulers
-import java.lang.Exception
 
 fun getService() = ServiceConnectionUtil.musicBinder?.service?.get()
 
@@ -105,10 +107,10 @@ fun exchangeDurationToText(duration: Int): String {
     return "${if (minute < 10) "0${minute}" else minute}:${if (sec < 10) "0${sec}" else sec}"
 }
 
-fun ImageView.loadArtSong(song: Song?) {
-    song?.run {
+fun ImageView.loadArtSong(id: Long?) {
+    id?.let {
         try {
-            val uri = ContentUris.withAppendedId(ArtURI, song.albumId)
+            val uri = ContentUris.withAppendedId(ArtURI, it)
             Picasso.get()
                 .load(uri)
                 .placeholder(R.drawable.ic_default_not_radius)
@@ -119,4 +121,27 @@ fun ImageView.loadArtSong(song: Song?) {
         } catch (e : Exception) { Log.e("Load Art Song", e.toString()) }
     }
     setImageResource(R.drawable.ic_default_not_radius)
+}
+
+fun <T> LongSparseArray<T>.toList(): ArrayList<T> {
+    val list = ArrayList<T>()
+    this.forEach { _, value ->
+        list.add(value)
+    }
+    return list
+}
+
+fun songsToAlbums(songs: List<Song>): List<Album> {
+    val albumMap = LongSparseArray<Album>()
+    songs.forEach { song ->
+        val album = Album(song.albumId, song.albumName, song.artistName)
+        val oldAlbum = albumMap[album.id]
+        oldAlbum?.let {
+            oldAlbum.songCount++
+        } ?: run {
+            album.songCount++
+            albumMap.put(album.id, album)
+        }
+    }
+    return albumMap.toList()
 }

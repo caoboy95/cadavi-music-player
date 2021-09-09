@@ -1,15 +1,10 @@
 package com.caocao.cadavimusicplayer.data.model
 
-import android.content.ContentUris
 import android.database.Cursor
-import android.os.Parcelable
 import android.provider.MediaStore
 import androidx.room.ColumnInfo
 import androidx.room.Entity
-import androidx.room.Index
 import androidx.room.PrimaryKey
-import kotlinx.android.parcel.IgnoredOnParcel
-import kotlinx.android.parcel.Parcelize
 import java.io.Serializable
 import java.text.Collator
 import java.util.*
@@ -32,22 +27,22 @@ data class Song(@PrimaryKey @ColumnInfo(name = "media_store_id") var id:Long,
 //    @IgnoredOnParcel
 //    var lastplayed: Int = 0
 
-    constructor(cursor: Cursor) : this(cursor.getLong(cursor.getColumnIndexOrThrow(MediaStore.Audio.Media._ID)),
+    constructor(cursor: Cursor) : this(
+        cursor.getLong(cursor.getColumnIndexOrThrow(MediaStore.Audio.Media._ID)),
         cursor.getString(cursor.getColumnIndexOrThrow(MediaStore.Audio.Media.TITLE)),
         cursor.getLong(cursor.getColumnIndexOrThrow(MediaStore.Audio.Media.ALBUM_ID)),
         cursor.getString(cursor.getColumnIndexOrThrow(MediaStore.Audio.Media.ALBUM)),
         cursor.getLong(cursor.getColumnIndexOrThrow(MediaStore.Audio.Media.ARTIST_ID)),
         cursor.getString(cursor.getColumnIndexOrThrow(MediaStore.Audio.Media.ARTIST)),
-        cursor.getLong(cursor.getColumnIndexOrThrow(MediaStore.Audio.Media.DURATION)))
+        cursor.getLong(cursor.getColumnIndexOrThrow(MediaStore.Audio.Media.DURATION))
+    )
 
 
     operator fun compareTo(song: Song): Int {
         val collator : Collator = Collator.getInstance(Locale.getDefault())
 
-        return when {
-            this.title == null -> -1
-            song.title == null -> 1
-            this.title == song.title -> 0
+        return when (this.title) {
+            song.title -> 0
             else -> collator.compare(this.title , song.title)
         }
     }

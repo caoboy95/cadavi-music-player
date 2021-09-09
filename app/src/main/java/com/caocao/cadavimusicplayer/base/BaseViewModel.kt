@@ -14,14 +14,13 @@ abstract class BaseViewModel(
 ) : AndroidViewModel(application) {
 
     protected var broadcastDisposable: Disposable? = null
-    val currentSongId = MutableLiveData<Long>()
+    protected var disposable: Disposable? = null
+    // Events
+    var isPlaying = MutableLiveData<Boolean>()
 
     private val songs = MutableLiveData<List<Song>>()
     val liveSongs : LiveData<List<Song>>
         get() = songs
-
-    // Events
-    var isPlaying = MutableLiveData<Boolean>()
 
     open fun start() {
         fetchSongs()
@@ -30,6 +29,7 @@ abstract class BaseViewModel(
     open fun stop() {
         disposeSongs()
         dispose(broadcastDisposable)
+        dispose(disposable)
     }
 
     abstract fun fetchSongs()

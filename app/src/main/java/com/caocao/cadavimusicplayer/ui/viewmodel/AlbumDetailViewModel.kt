@@ -2,7 +2,6 @@ package com.caocao.cadavimusicplayer.ui.viewmodel
 
 import android.app.Application
 import android.content.IntentFilter
-import android.util.Log
 import com.cantrowitz.rxbroadcast.RxBroadcast
 import com.caocao.cadavimusicplayer.base.BaseViewModel
 import com.caocao.cadavimusicplayer.data.repository.MediaRepository
@@ -11,10 +10,8 @@ import com.caocao.cadavimusicplayer.service.MusicService
 import com.caocao.cadavimusicplayer.util.getService
 import com.caocao.cadavimusicplayer.util.shuffleAndPlay
 import io.reactivex.android.schedulers.AndroidSchedulers
-import java.util.Collections.sort
 
-
-class AllSongViewModel(
+class AlbumDetailViewModel(
     application: Application,
     private val mediaRepository: MediaRepository,
     private val preferenceRepository: PreferenceRepository
@@ -34,19 +31,21 @@ class AllSongViewModel(
     }
 
     override fun fetchSongs() {
-        Log.e("AllSongViewModel","fetch")
-        disposeSongs()
-        disposable = mediaRepository.getSongs()
-            .observeOn(AndroidSchedulers.mainThread())
-            .take(1)
-            .map { songs -> sort(songs) { a, b -> a.compareTo(b)}
-                return@map songs
-            }
-            .subscribe( { setSongs(it) }, { Log.ERROR } )
-        Log.e("AllSongViewModel","fetched")
+
     }
 
     override fun disposeSongs() {
+
+    }
+
+    fun getSongs(albumId: Long) {
+        disposable = mediaRepository.getAlbumSongs(albumId)
+            .observeOn(AndroidSchedulers.mainThread())
+            .subscribe {
+                it?.let {
+                    setSongs(it)
+                }
+            }
     }
 
     fun shuffleAll() {
@@ -54,9 +53,5 @@ class AllSongViewModel(
             preferenceRepository.isShuffle = true
             shuffleAndPlay(it)
         }
-    }
-
-    companion object {
-        const val TAG = "AllSongViewModel"
     }
 }
