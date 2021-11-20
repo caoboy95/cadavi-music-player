@@ -1,4 +1,4 @@
-package net.simplifiedcoding.mvvmsampleapp.data.preferences
+package com.caocao.cadavimusicplayer.data.preferences
 
 import android.content.Context
 import android.content.SharedPreferences
@@ -9,7 +9,7 @@ class PreferenceProvider(
     context: Context
 ) {
     private val appContext = context
-    val preference: SharedPreferences
+    private val preference: SharedPreferences
         get() = PreferenceManager.getDefaultSharedPreferences(appContext)
 
     var repeatMode: Int

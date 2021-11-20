@@ -91,6 +91,22 @@ class MusicPlayerFragment : BasePlayerFragment<MusicPlayerViewModel, FragmentMus
         }
     }
 
+    private fun updateFavoriteImage(songId: Long) {
+        if (viewModel.isFavorited(songId)) {
+            binding.favorite.setImageResource(R.drawable.ic_favorite)
+            binding.favorite.setOnClickListener {
+                viewModel.removeFavorite(songId)
+                updateFavoriteImage(songId)
+            }
+            return
+        }
+        binding.favorite.setImageResource(R.drawable.ic_unfavorite)
+        binding.favorite.setOnClickListener {
+            viewModel.addFavorite(songId)
+            updateFavoriteImage(songId)
+        }
+    }
+
     fun setVisibility(visibility: Int) {
         binding.settingContent.visibility = visibility
     }
@@ -124,6 +140,7 @@ class MusicPlayerFragment : BasePlayerFragment<MusicPlayerViewModel, FragmentMus
         getService()?.run {
             binding.playerArt.loadArtSong(getCurrentSongOrNull()?.albumId)
         }
+        updateFavoriteImage(song.id)
     }
 
     override fun setPlayPauseAction(isPlaying: Boolean) {
@@ -145,6 +162,6 @@ class MusicPlayerFragment : BasePlayerFragment<MusicPlayerViewModel, FragmentMus
 
     companion object {
         var views: View? = null
-        public const val TAG = "MusicPlayerFragment"
+        const val TAG = "MusicPlayerFragment"
     }
 }

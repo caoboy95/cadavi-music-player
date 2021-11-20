@@ -182,6 +182,7 @@ class HomeActivity : AppCompatActivity() {
             TabLayoutMediator.TabConfigurationStrategy { tab, position ->
                 when (position) {
                     0 -> tab.text = resources.getString(R.string.all_song)
+                    1 -> tab.text = resources.getString(R.string.favorite)
                     else -> tab.text = this.resources.getString(R.string.album)
                 }
             }).attach()

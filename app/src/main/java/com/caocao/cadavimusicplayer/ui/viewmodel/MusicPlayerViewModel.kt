@@ -3,14 +3,15 @@ package com.caocao.cadavimusicplayer.ui.viewmodel
 import android.app.Application
 import android.content.SharedPreferences
 import com.caocao.cadavimusicplayer.base.BasePlayerViewModel
-import com.caocao.cadavimusicplayer.data.repository.MediaRepository
+import com.caocao.cadavimusicplayer.data.model.Favorite
+import com.caocao.cadavimusicplayer.data.repository.LocalRepository
 import com.caocao.cadavimusicplayer.data.repository.PreferenceRepository
 import com.caocao.cadavimusicplayer.service.MusicPlayer
 
 class MusicPlayerViewModel(
     application: Application,
     private val preferenceRepository: PreferenceRepository,
-    private val mediaRepository: MediaRepository
+    private val localRepository: LocalRepository
 ): BasePlayerViewModel(application) {
 
     var playingMode: Int
@@ -56,4 +57,14 @@ class MusicPlayerViewModel(
             }
         }
     }
+
+    fun addFavorite(id: Long) {
+        localRepository.addFavorite(Favorite(id))
+    }
+
+    fun removeFavorite(id: Long) {
+        localRepository.deleteFavorite(Favorite(id))
+    }
+
+    fun isFavorited(songId: Long) = (localRepository.getFavorite(songId) != null)
 }

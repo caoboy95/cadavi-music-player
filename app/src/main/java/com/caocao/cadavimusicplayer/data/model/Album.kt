@@ -1,8 +1,10 @@
 package com.caocao.cadavimusicplayer.data.model
 
 import android.os.Parcelable
-import kotlinx.android.parcel.IgnoredOnParcel
-import kotlinx.android.parcel.Parcelize
+import kotlinx.parcelize.IgnoredOnParcel
+//import kotlinx.android.parcel.IgnoredOnParcel
+import kotlinx.parcelize.Parcelize
+//import kotlinx.android.parcel.Parcelize
 import java.text.Collator
 import java.util.*
 

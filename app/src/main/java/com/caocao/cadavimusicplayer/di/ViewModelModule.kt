@@ -10,4 +10,5 @@ val viewModelModule = module {
     viewModel { MusicPlayerViewModel(get(), get(), get()) }
     viewModel { AlbumViewModel(get(), get()) }
     viewModel { AlbumDetailViewModel(get(), get(), get()) }
+    viewModel { FavoriteViewModel(get(), get(), get()) }
 }

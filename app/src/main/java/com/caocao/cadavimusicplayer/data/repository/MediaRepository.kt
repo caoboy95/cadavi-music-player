@@ -3,19 +3,17 @@ package com.caocao.cadavimusicplayer.data.repository
 import android.content.Context
 import android.net.Uri
 import android.provider.MediaStore
+import com.annimon.stream.Collectors
+import com.annimon.stream.Stream
 import com.caocao.cadavimusicplayer.data.model.Album
+import com.caocao.cadavimusicplayer.data.model.Favorite
 import com.caocao.cadavimusicplayer.data.model.Song
 import com.caocao.cadavimusicplayer.util.Query
 import com.caocao.cadavimusicplayer.util.songsToAlbums
 import com.caocao.cadavimusicplayer.util.toBrite
-import com.example.testapp.data.db.AppDatabase
 import io.reactivex.Observable
 
-
-class MediaRepository constructor(
-    context: Context,
-    private val localDataSource: AppDatabase
-) {
+class MediaRepository (context: Context) {
     private val contentResolver = context.contentResolver
     private val briteContentResolver = contentResolver.toBrite()
 
@@ -69,5 +67,21 @@ class MediaRepository constructor(
 
     fun getAlbumSongs(albumId: Long): Observable<List<Song>> {
         return getSongs().map { songs -> songs.filter { it.albumId == albumId } }
+    }
+
+    fun getFavorites(favorites: Observable<List<Favorite>>): Observable<List<Song>> {
+        return favorites.flatMap { it ->
+                val songsQuery = songQuery.copy(
+                    selection = songQuery.selection + " AND " + MediaStore.Audio.Media._ID + " IN (" +
+                            Stream.of(it)
+                                .map { it.id.toString() }
+                                .collect(Collectors.joining(",")) +
+                            ")"
+                )
+                return@flatMap contentResolver.toBrite()
+                    .createQuery(songsQuery.uri, songsQuery.projection, songsQuery.selection, songsQuery.args,
+                        songsQuery.sort, false)
+                    .mapToList { Song(it) }
+            }
     }
 }
