@@ -24,6 +24,12 @@ class SongAdapter : RecyclerView.Adapter<SongAdapter.SongHolder>(), Consumer<Lis
         Log.d(TAG, songs.size.toString())
     }
 
+    @SuppressLint("NotifyDataSetChanged")
+    fun reset() {
+        songs = ArrayList()
+        notifyDataSetChanged()
+    }
+
     fun setOnClickSongListener(listener: OnClickSongListener) {
         this.listener = listener
     }
@@ -40,13 +46,13 @@ class SongAdapter : RecyclerView.Adapter<SongAdapter.SongHolder>(), Consumer<Lis
             binding.rootListItem.setOnClickListener {
                 listener.onClickSong(position)
             }
-            binding.imageViewSong.loadArtSong(song.albumId)
+            binding.imageViewSong.loadArtSong(song)
         }
 
         private fun setImagePlayPause(song: Song) {
             getService()?.run {
                 getCurrentSongOrNull()?.let {
-                    if (song == it) {
+                    if (song.equals(it)) {
                         binding.imgPlaying.visibility = View.VISIBLE
                         binding.nameSong.setTextColor(resources.getColor(R.color.tab_color))
                         if (isPlaying()) {

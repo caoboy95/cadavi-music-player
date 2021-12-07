@@ -21,6 +21,7 @@ import com.caocao.cadavimusicplayer.ui.adapter.TabAdapter
 import com.caocao.cadavimusicplayer.ui.view.AllSongsFragment
 import com.caocao.cadavimusicplayer.ui.view.MiniPlayerFragment
 import com.caocao.cadavimusicplayer.ui.view.MusicPlayerFragment
+import com.caocao.cadavimusicplayer.util.NetworkLiveData
 import com.caocao.cadavimusicplayer.util.ServiceConnectionUtil
 import com.caocao.cadavimusicplayer.util.replaceFragmentToActivity
 import com.google.android.material.tabs.TabLayoutMediator
@@ -51,6 +52,7 @@ class HomeActivity : AppCompatActivity() {
         initTabLayout()
         settingSlidingPanel()
         serviceConnectionToken = bindServiceAndGetToken(applicationContext)
+        NetworkLiveData.init(application)
     }
 
     override fun onResume() {
@@ -183,7 +185,8 @@ class HomeActivity : AppCompatActivity() {
                 when (position) {
                     0 -> tab.text = resources.getString(R.string.all_song)
                     1 -> tab.text = resources.getString(R.string.favorite)
-                    else -> tab.text = this.resources.getString(R.string.album)
+                    2 -> tab.text = this.resources.getString(R.string.album)
+                    else -> tab.text = this.resources.getString(R.string.audio_online)
                 }
             }).attach()
     }

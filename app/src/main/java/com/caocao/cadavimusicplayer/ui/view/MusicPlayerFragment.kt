@@ -7,6 +7,7 @@ import android.view.ViewGroup
 import android.widget.SeekBar
 import com.caocao.cadavimusicplayer.R
 import com.caocao.cadavimusicplayer.base.BasePlayerFragment
+import com.caocao.cadavimusicplayer.data.model.OnlineSong
 import com.caocao.cadavimusicplayer.data.model.Song
 import com.caocao.cadavimusicplayer.databinding.FragmentMusicPlayerBinding
 import com.caocao.cadavimusicplayer.service.MusicPlayer
@@ -39,10 +40,6 @@ class MusicPlayerFragment : BasePlayerFragment<MusicPlayerViewModel, FragmentMus
         updatePlayingModeButton()
         updateShuffleButton()
         viewModel.setOnShuffleChangeListener(::updateShuffleButton)
-    }
-
-    override fun onDestroy() {
-        super.onDestroy()
     }
 
     private fun init() {
@@ -92,6 +89,14 @@ class MusicPlayerFragment : BasePlayerFragment<MusicPlayerViewModel, FragmentMus
     }
 
     private fun updateFavoriteImage(songId: Long) {
+        getService()?.getCurrentSongOrNull()?.let {
+            if (it is OnlineSong) {
+                binding.favorite.visibility = View.GONE
+                return
+            } else {
+                binding.favorite.visibility = View.VISIBLE
+            }
+        }
         if (viewModel.isFavorited(songId)) {
             binding.favorite.setImageResource(R.drawable.ic_favorite)
             binding.favorite.setOnClickListener {
@@ -138,7 +143,7 @@ class MusicPlayerFragment : BasePlayerFragment<MusicPlayerViewModel, FragmentMus
         binding.progress.max = song.duration.toInt()
         binding.duration.text = exchangeDurationToText(song.duration.toInt())
         getService()?.run {
-            binding.playerArt.loadArtSong(getCurrentSongOrNull()?.albumId)
+            binding.playerArt.loadArtSong(getCurrentSongOrNull())
         }
         updateFavoriteImage(song.id)
     }
@@ -161,7 +166,6 @@ class MusicPlayerFragment : BasePlayerFragment<MusicPlayerViewModel, FragmentMus
     ) = FragmentMusicPlayerBinding.inflate(inflater, container, false)
 
     companion object {
-        var views: View? = null
         const val TAG = "MusicPlayerFragment"
     }
 }

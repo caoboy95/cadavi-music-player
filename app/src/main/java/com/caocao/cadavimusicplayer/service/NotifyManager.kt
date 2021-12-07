@@ -1,14 +1,12 @@
 package com.caocao.cadavimusicplayer.service
 
-import android.annotation.SuppressLint
 import android.app.NotificationChannel
 import android.app.NotificationManager
 import android.app.PendingIntent
 import android.content.ContentUris
 import android.content.Context
 import android.content.Intent
-import android.graphics.Bitmap
-import android.graphics.drawable.Drawable
+import android.graphics.BitmapFactory
 import android.os.Build
 import android.support.v4.media.MediaMetadataCompat
 import android.support.v4.media.session.PlaybackStateCompat
@@ -17,11 +15,13 @@ import androidx.core.app.NotificationCompat
 import androidx.core.app.NotificationManagerCompat
 import androidx.core.content.ContextCompat
 import com.caocao.cadavimusicplayer.R
+import com.caocao.cadavimusicplayer.data.model.OnlineSong
 import com.caocao.cadavimusicplayer.ui.HomeActivity
 import com.caocao.cadavimusicplayer.util.ArtURI
 import com.caocao.cadavimusicplayer.util.MediaStyleHelper
 import com.caocao.cadavimusicplayer.util.createActivityPendingIntent
 import com.caocao.cadavimusicplayer.util.createServicePendingIntent
+import java.io.ByteArrayInputStream
 
 class NotifyManager(private val service: MusicService) {
 
@@ -60,8 +60,18 @@ class NotifyManager(private val service: MusicService) {
             metadataBuilder.apply {
                 putString(MediaMetadataCompat.METADATA_KEY_ARTIST, currentSong.artistName)
                 putString(MediaMetadataCompat.METADATA_KEY_TITLE, currentSong.title)
-                putString(MediaMetadataCompat.METADATA_KEY_ART_URI, uri.toString())
                 putString(MediaMetadataCompat.METADATA_KEY_ALBUM_ART_URI, uri.toString())
+                if (currentSong is OnlineSong) {
+                    currentSong.art?.also {
+                        putBitmap(
+                            MediaMetadataCompat.METADATA_KEY_ART,
+                            BitmapFactory.decodeStream(ByteArrayInputStream(it))
+                        )
+                    } ?: putBitmap(
+                        MediaMetadataCompat.METADATA_KEY_ART,
+                        BitmapFactory.decodeResource(mContext.applicationContext.resources, R.drawable.ic_default_not_radius)
+                    )
+                }
             }
             service.setMetaDataMedia(metadataBuilder.build())
         }

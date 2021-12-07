@@ -10,7 +10,7 @@
     <string name="feedback">Feedback</string>
     <string name="policy">Privacy policy</string>
     <string name="now_is_playing">Now is playing</string>
-    <string name="now_is_pausing">Now is pausing</string>
+    <string name="now_is_pausing" translatable="false">Now is pausing</string>
     <string name="update_app">New update available</string>
     <string name="dialog_update_available_message">It seems that you have an older version of the app.\nPlease update to get latest features and best experience.</string>
     <string name="update_now">Go to Google Play</string>
@@ -112,4 +112,8 @@
     <string name="artist_name">Artist Name</string>
     <string name="count_songs">Count Songs</string>
     <string name="network_connection">Please check your connection!</string>
+    <string name="audio_online" translatable="false">Audio Online</string>
+    <string name="no_internet_connection">No Internet Connection</string>
+    <string name="please_check_connection">You can\'t use this feature offline. Check your connection and try again.</string>
+    <string name="loading_audio">Loading audio...</string>
 </resources>

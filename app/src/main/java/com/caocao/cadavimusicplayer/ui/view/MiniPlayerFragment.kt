@@ -25,10 +25,6 @@ class MiniPlayerFragment : BasePlayerFragment<MiniPlayerViewModel, FragmentMiniP
         return binding.root
     }
 
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        super.onViewCreated(view, savedInstanceState)
-    }
-
     private fun init() {
         binding.run {
             miniPlayerTitle.isSelected = true
@@ -54,7 +50,7 @@ class MiniPlayerFragment : BasePlayerFragment<MiniPlayerViewModel, FragmentMiniP
         binding.miniPlayerTitle.text = song.title
         binding.miniPlayerProgress.max = song.duration.toInt()
         getService()?.run {
-            binding.miniPlayerArt.loadArtSong(getCurrentSongOrNull()?.albumId)
+            binding.miniPlayerArt.loadArtSong(getCurrentSongOrNull())
         }
     }
 

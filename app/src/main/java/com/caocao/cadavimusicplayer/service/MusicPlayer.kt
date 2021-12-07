@@ -1,14 +1,14 @@
 package com.caocao.cadavimusicplayer.service
 
 import android.content.ContentUris
-import android.content.Context
 import android.media.AudioAttributes
 import android.media.MediaPlayer
 import android.os.PowerManager
 import android.provider.MediaStore
 import android.util.Log
 import android.widget.Toast
-import androidx.lifecycle.MutableLiveData
+import androidx.core.net.toUri
+import com.caocao.cadavimusicplayer.data.model.OnlineSong
 import com.caocao.cadavimusicplayer.data.model.Song
 
 class MusicPlayer(private val musicService: MusicService) : MediaPlayer.OnPreparedListener,
@@ -19,7 +19,6 @@ class MusicPlayer(private val musicService: MusicService) : MediaPlayer.OnPrepar
     private var isPrepared = false
     private var pauseTime : Int = 0
     private var isPreparing: Boolean = false
-//    private var canPlay: Boolean = true
 
     init {
         mediaPlayer.setWakeMode(musicService, PowerManager.PARTIAL_WAKE_LOCK)
@@ -37,10 +36,12 @@ class MusicPlayer(private val musicService: MusicService) : MediaPlayer.OnPrepar
         this.song = song
         pauseTime = 0
         isPrepared = false
-        mediaPlayer.reset()
-
         val trackUri =
-            ContentUris.withAppendedId(MediaStore.Audio.Media.EXTERNAL_CONTENT_URI, song.id)
+            if (song !is OnlineSong)
+                ContentUris.withAppendedId(MediaStore.Audio.Media.EXTERNAL_CONTENT_URI, song.id)
+            else song.url.toUri()
+
+        mediaPlayer.reset()
         try {
             mediaPlayer.setDataSource(musicService, trackUri)
             mediaPlayer.prepareAsync()

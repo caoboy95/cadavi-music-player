@@ -7,6 +7,7 @@ import android.content.ContentUris
 import android.content.Context
 import android.content.Intent
 import android.content.pm.PackageManager
+import android.graphics.BitmapFactory
 import android.graphics.Color
 import android.os.Build
 import android.transition.Fade
@@ -19,12 +20,15 @@ import androidx.core.util.forEach
 import androidx.fragment.app.Fragment
 import com.caocao.cadavimusicplayer.R
 import com.caocao.cadavimusicplayer.data.model.Album
+import com.caocao.cadavimusicplayer.data.model.OnlineSong
 import com.caocao.cadavimusicplayer.data.model.Song
 import com.squareup.picasso.Picasso
 import com.squareup.sqlbrite2.BriteContentResolver
 import com.squareup.sqlbrite2.SqlBrite
 import io.reactivex.disposables.Disposable
 import io.reactivex.schedulers.Schedulers
+import java.io.ByteArrayInputStream
+
 
 fun getService() = ServiceConnectionUtil.musicBinder?.service?.get()
 
@@ -107,20 +111,34 @@ fun exchangeDurationToText(duration: Int): String {
     return "${if (minute < 10) "0${minute}" else minute}:${if (sec < 10) "0${sec}" else sec}"
 }
 
-fun ImageView.loadArtSong(id: Long?) {
-    id?.let {
-        try {
-            val uri = ContentUris.withAppendedId(ArtURI, it)
-            Picasso.get()
-                .load(uri)
-                .placeholder(R.drawable.ic_default_not_radius)
-                .error(R.drawable.ic_default_not_radius)
-                .fit()
-                .into(this@loadArtSong)
-            return
-        } catch (e : Exception) { Log.e("Load Art Song", e.toString()) }
-    }
-    setImageResource(R.drawable.ic_default_not_radius)
+fun ImageView.loadArtSong(song: Song?) {
+    try {
+        song?.let {
+            when {
+                song is OnlineSong && song.art != null -> {
+                    setImageBitmap(BitmapFactory.decodeStream(ByteArrayInputStream(song.art)))
+                    return
+                }
+                song !is OnlineSong -> {
+                    loadArtSong(song.albumId)
+                    return
+                }
+                else -> {}
+            }
+        }
+        setImageResource(R.drawable.ic_default_not_radius)
+    } catch (e : Exception) { Log.e("Load Art Song", e.toString()) }
+}
+
+fun ImageView.loadArtSong(id: Long) {
+    val uri = ContentUris.withAppendedId(ArtURI, id)
+
+    Picasso.get()
+        .load(uri)
+        .placeholder(R.drawable.ic_default_not_radius)
+        .error(R.drawable.ic_default_not_radius)
+        .fit()
+        .into(this@loadArtSong)
 }
 
 fun <T> LongSparseArray<T>.toList(): ArrayList<T> {

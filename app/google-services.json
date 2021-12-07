@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "670006161266",
+    "project_id": "cadavi-music-player",
+    "storage_bucket": "cadavi-music-player.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:670006161266:android:3e6e1ef843f14bfcff37eb",
+        "android_client_info": {
+          "package_name": "com.caocao.cadavimusicplayer"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "670006161266-5i9s5j1eh9hblk2e7hm6d1bqneill8j9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA7buGo4n_vkZQIEBslHXQ9Z6JmO8fnbno"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "670006161266-5i9s5j1eh9hblk2e7hm6d1bqneill8j9.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -22,12 +22,10 @@ import org.koin.android.ext.android.inject
 
 
 class MusicService : Service(), SharedPreferences.OnSharedPreferenceChangeListener {
-//    val mediaRepository: MediaRepository by inject()
     private lateinit var musicPlayer: MusicPlayer
     private val preferenceRepository: PreferenceRepository by inject()
     private var isPlaybackDelayed = false
     private var isPlaybackNowAuthorized = false
-    private var canPlayMusic = false
     private var wasPlaying = false
     private var isPausing = false
     private var currentSongPosition: Int = 0
@@ -43,6 +41,7 @@ class MusicService : Service(), SharedPreferences.OnSharedPreferenceChangeListen
         set(value) { musicPlayer.seekTo(value) }
         get() = musicPlayer.getCurrentPosition()
 
+    //notification
     private lateinit var _mediaSession : MediaSessionCompat
     val mediaSession : MediaSessionCompat
         get() = _mediaSession
@@ -50,6 +49,7 @@ class MusicService : Service(), SharedPreferences.OnSharedPreferenceChangeListen
     val notifyManager : NotifyManager
         get() = _notifyManager
 
+    //focus audio
     private lateinit var audioManager: AudioManager
     private val focusLock = Any()
     private var focusRequest: AudioFocusRequest? = null
@@ -400,13 +400,6 @@ class MusicService : Service(), SharedPreferences.OnSharedPreferenceChangeListen
         const val METADATA_CHANGED = "InternalIntents.METADATA_CHANGED"
         const val SERVICE_CONNECTED =
             "InternalIntents.SERVICE_CONNECTED"
-    }
-
-    object WidgetIntents {
-        const val PREVIOUS = "WidgetIntents.PREVIOUS"
-        const val PLAY_PAUSE = "WidgetIntents.PLAY_PAUSE"
-        const val NEXT = "WidgetIntents.NEXT"
-        const val CLOSE = "WidgetIntents.CLOSE"
     }
 
     companion object {
